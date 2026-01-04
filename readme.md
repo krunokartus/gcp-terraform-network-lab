@@ -11,6 +11,14 @@ This project demonstrates the automated deployment of a secure and segmented net
 - **Automated Configuration:** Use of **Bash startup scripts** for automatic system hardening and service installation (Nginx, monitoring tools).
 
 ## Resource Dependency Graph
+
+The following graph visualizes the infrastructure dependencies in this lab. It illustrates how the networking components are interconnected:
+
+* **VPC centric:** The `industrial-vpc` acts as the core hub for all resources.
+* **Hierarchical networking:** Subnets, Management and Production, are logically attached to the VPC.
+* **Security and access:** Firewall rules and the IAP (Identity-Aware Proxy) gateway are integrated into the network flow to ensure zero-trust access.
+* **Outbound Logic:** The Cloud Router and NAT Gateway are mapped to provide secure internet access for private instances.
+
 ![Terraform Graph](./images/graph.png)
 
 ## Architecture
