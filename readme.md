@@ -10,6 +10,9 @@ This project demonstrates the automated deployment of a secure and segmented net
 - **Egress Management:** Utilization of **Cloud NAT** so private instances can securely download updates without being accessible from the internet.
 - **Automated Configuration:** Use of **Bash startup scripts** for automatic system hardening and service installation (Nginx, monitoring tools).
 
+## Resource Dependency Graph
+![Terraform Graph](./images/graph.png)
+
 ## Architecture
 
 The setup consists of:
@@ -61,7 +64,6 @@ cd gcp-terraform-network-lab`
 
 If everything was ok, the end of deployment ends with the Apply complete! message: 
 ![Terraform Apply Output](./images/deployed.png)
-
 
 ## Check the resources in GCP console:
 
