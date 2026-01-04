@@ -59,19 +59,15 @@ cd gcp-terraform-network-lab`
   
 `terraform apply`
 
-
-
-4. Cleanup: To avoid unnecessary costs, you can remove the entire infrastructure with the following command:
-
-`terraform destroy`
-
-If everything was ok, the end of deployment ends with the Apply complete! message:
+If everything was ok, the end of deployment ends with the Apply complete! message: 
 ![Terraform Apply Output](.images/deployed.png)
 
-*** Check the resources in GCP console:***
-- navigate and login to your account `https://console.cloud.google.com/`
-* In menu select Compute Engine -> VM Instances:
 
+** Check the resources in GCP console:**
+
+- navigate and login to your account `https://console.cloud.google.com/`
+
+* In menu select Compute Engine -> VM Instances:
 ![Terraform Apply Output](./images/vm-instance.png)
 
 * In menu select VPC Network -> VPC Networks:
@@ -85,3 +81,8 @@ If everything was ok, the end of deployment ends with the Apply complete! messag
 
 * find the router and click on it:
 ![Terraform Apply Output](.images/router.png)
+
+
+4. Cleanup: To avoid unnecessary costs, you can remove the entire infrastructure with the following command:
+`terraform destroy`
+
