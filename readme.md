@@ -62,3 +62,8 @@ cd gcp-terraform-network-lab`
 4. Cleanup: To avoid unnecessary costs, you can remove the entire infrastructure with the following command:
 
 `terraform destroy`
+
+Check the resources in GCP console:
+- navigate and login to your account `https://console.cloud.google.com/`
+Compute Engine -> VM Instances:
+
