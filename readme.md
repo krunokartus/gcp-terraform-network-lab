@@ -1,36 +1,59 @@
-# Automated secure GCP network lab
+# Automated Secure GCP Network Lab
 
-Dieses Projekt demonstriert die automatisierte Bereitstellung einer sicheren und segmentierten Netzwerkinfrastruktur in der Google Cloud Platform (GCP). Es wurde entwickelt, um moderne Sicherheitsprinzipien wie Zero Trust und kontrollierten Egress-Traffic zu veranschaulichen.
+This project demonstrates the automated deployment of a secure and segmented network infrastructure on Google Cloud Platform (GCP). It is designed to showcase modern security principles such as Zero Trust and controlled egress traffic.
 
-## Kernfunktionen
+## Core Features
 
-- **Infrastruktur als Code (IaC):** Vollständige Automatisierung mit **Terraform** zur Gewährleistung von Konsistenz und Stabilität.
-- **Netzwerksegmentierung:** Trennung von Management- und Produktions-Subnetzen zur Reduzierung der Angriffsfläche.
-- **Zero-Trust-Zugriff:** Implementierung von **Identity-Aware Proxy (IAP)** für sicheren SSH-Zugriff ohne öffentliche IP-Adressen oder offene Ports.
-- **Egress-Management:** Nutzung von **Cloud NAT**, damit private Instanzen sicher Updates beziehen können, ohne aus dem Internet erreichbar zu sein.
-- **Automatisierte Konfiguration:** Nutzung von **Bash-Skripten** (Startup-Scripts) zur automatischen Systemhärtung und Dienstinstallation (Nginx, Monitoring-Tools).
+- **Infrastructure as Code (IaC):** Full automation using **Terraform** to ensure consistency and stability.
+- **Network Segmentation:** Separation of management and production subnets to reduce the attack surface.
+- **Zero Trust Access:** Implementation of **Identity-Aware Proxy (IAP)** for secure SSH access without public IP addresses or open ports.
+- **Egress Management:** Utilization of **Cloud NAT** so private instances can securely download updates without being accessible from the internet.
+- **Automated Configuration:** Use of **Bash startup scripts** for automatic system hardening and service installation (Nginx, monitoring tools).
 
-## Architektur
+## Architecture
 
-Das Setup besteht aus:
-1.  Einem maßgeschneiderten **VPC** (industrial-vpc).
-2.  Zwei isolierten **Subnetzen** (Management & Production).
-3.  Einem **Cloud Router** und **Cloud NAT** für sicheren ausgehenden Traffic.
-4.  Speziellen **Firewall-Regeln**, die den Zugriff strikt auf den IAP-Bereich von Google beschränken.
+The setup consists of:
+1. A customized **VPC** (industrial-vpc).
+2. Two isolated **subnets** (Management and Production).
+3. A **Cloud Router** and **Cloud NAT** for secure outbound traffic.
+4. Specific **Firewall Rules** that strictly limit access to Google's IAP range.
 
-## Technologien
+## Technologies
 - **Cloud:** Google Cloud Platform (GCP)
 - **IaC:** Terraform
 - **Scripting:** Bash
-- **Sicherheit:** Identity-Aware Proxy (IAP), Firewall Rules, Cloud NAT
+- **Security:** Identity-Aware Proxy (IAP), Firewall Rules, Cloud NAT
 
-## Installation & Deployment
+---
 
-1. Repository klonen:
-   `git clone https://github.com/kruno-kartus/gcp-terraform-network-lab.git`
-2. Terraform initialisieren:
-   `terraform init`
-3. Infrastruktur planen und prüfen:
-   `terraform plan`
-4. Deployment durchführen:
-   `terraform apply`
+## Installation and Deployment
+
+### 1. Prerequisites
+Ensure the following components are installed and configured:
+* **Terraform**: Download the latest version from `https://developer.hashicorp.com/terraform/install`.
+* **Google Cloud SDK (gcloud CLI)**: Follow the instructions at `https://docs.cloud.google.com/sdk/docs/install-sdk`.
+* **GCP Project**: An active Google Cloud Project ID with billing enabled is required.
+
+### 2. Authentication
+Before running Terraform, you must authenticate your CLI with your Google Cloud account. In the terminal run: 
+`gcloud auth application-default login`.
+
+### 3. Deployment Steps
+Steps to build the infrastructure:
+
+- Clone the repository and change to the lab directory:
+`git clone https://github.com/kruno-kartus/gcp-terraform-network-lab.git
+cd gcp-terraform-network-lab`
+
+- Initialize Terraform:
+`terraform init`
+
+- Plan and verify infrastructure:
+`terraform plan`
+
+- Deploy the infrastructure, this will create resources in GCP:
+`terraform apply`
+
+4. Cleanup
+To avoid unnecessary costs, you can remove the entire infrastructure with the following command:
+`terraform destroy`
