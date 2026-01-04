@@ -1,5 +1,14 @@
 variable "project_id" {
-  description = "Building GCP infrastructure for a company"
+  description = "project-id"
   type        = string
-  default     = "gcp-terraform-network-lab"
+}
+
+variable "region" {
+  description = "region"
+  type        = string
+}
+
+variable "zone" {
+  description = "zone"
+  type        = string
 }
