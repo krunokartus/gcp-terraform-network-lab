@@ -7,7 +7,7 @@ Dieses Projekt demonstriert die automatisierte Bereitstellung einer sicheren und
 - **Infrastruktur als Code (IaC):** Vollständige Automatisierung mit **Terraform** zur Gewährleistung von Konsistenz und Stabilität.
 - **Netzwerksegmentierung:** Trennung von Management- und Produktions-Subnetzen zur Reduzierung der Angriffsfläche.
 - **Zero-Trust-Zugriff:** Implementierung von **Identity-Aware Proxy (IAP)** für sicheren SSH-Zugriff ohne öffentliche IP-Adressen oder offene Ports.
-- **Egress-Management:** Nutzung von **Cloud NAT*, damit private Instanzen sicher Updates beziehen können, ohne aus dem Internet erreichbar zu sein.
+- **Egress-Management:** Nutzung von **Cloud NAT**, damit private Instanzen sicher Updates beziehen können, ohne aus dem Internet erreichbar zu sein.
 - **Automatisierte Konfiguration:** Nutzung von **Bash-Skripten** (Startup-Scripts) zur automatischen Systemhärtung und Dienstinstallation (Nginx, Monitoring-Tools).
 
 ## Architektur
@@ -15,7 +15,7 @@ Dieses Projekt demonstriert die automatisierte Bereitstellung einer sicheren und
 Das Setup besteht aus:
 1.  Einem maßgeschneiderten **VPC** (industrial-vpc).
 2.  Zwei isolierten **Subnetzen** (Management & Production).
-3.  Einem **Cloud Router** & **Cloud NAT** für sicheren ausgehenden Traffic.
+3.  Einem **Cloud Router** und **Cloud NAT** für sicheren ausgehenden Traffic.
 4.  Speziellen **Firewall-Regeln**, die den Zugriff strikt auf den IAP-Bereich von Google beschränken.
 
 ## Technologien
