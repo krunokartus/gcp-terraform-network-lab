@@ -60,7 +60,7 @@ cd gcp-terraform-network-lab`
 `terraform apply`
 
 If everything was ok, the end of deployment ends with the Apply complete! message: 
-![Terraform Apply Output](.images/deployed.png)
+![Terraform Apply Output](./images/deployed.png)
 
 
 ** Check the resources in GCP console:**
@@ -74,13 +74,13 @@ If everything was ok, the end of deployment ends with the Apply complete! messag
 ![Terraform Apply Output](./images/vpc.png)
 
 * In menu select VPC Network -> Firewall:
-![Terraform Apply Output](.images/firewall-rules.png)
+![Terraform Apply Output](./images/firewall-rules.png)
 
 * In menu select Network Services -> Cloud NAT:
-![Terraform Apply Output](.images/nat.png)
+![Terraform Apply Output](./images/nat.png)
 
 * find the router and click on it:
-![Terraform Apply Output](.images/router.png)
+![Terraform Apply Output](./images/router.png)
 
 
 4. Cleanup: To avoid unnecessary costs, you can remove the entire infrastructure with the following command:
