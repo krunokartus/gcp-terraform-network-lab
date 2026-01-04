@@ -63,26 +63,32 @@ If everything was ok, the end of deployment ends with the Apply complete! messag
 ![Terraform Apply Output](./images/deployed.png)
 
 
-** Check the resources in GCP console:**
+## Check the resources in GCP console:
 
 - navigate and login to your account `https://console.cloud.google.com/`
 
-* In menu select Compute Engine -> VM Instances:
+### In menu select Compute Engine -> VM Instances:
+
 ![Terraform Apply Output](./images/vm-instance.png)
 
-* In menu select VPC Network -> VPC Networks:
+### In menu select VPC Network -> VPC Networks:
+
 ![Terraform Apply Output](./images/vpc.png)
 
-* In menu select VPC Network -> Firewall:
+### In menu select VPC Network -> Firewall:
+
 ![Terraform Apply Output](./images/firewall-rules.png)
 
-* In menu select Network Services -> Cloud NAT:
+### In menu select Network Services -> Cloud NAT:
+
 ![Terraform Apply Output](./images/nat.png)
 
-* find the router and click on it:
+### Find the router and click on it:
+
 ![Terraform Apply Output](./images/router.png)
 
 
-4. Cleanup: To avoid unnecessary costs, you can remove the entire infrastructure with the following command:
+## Cleanup: To avoid unnecessary costs, you can remove the entire infrastructure with the following command:
+
 `terraform destroy`
 
