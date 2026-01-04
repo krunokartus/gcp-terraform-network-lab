@@ -35,25 +35,30 @@ Ensure the following components are installed and configured:
 * **GCP Project**: An active Google Cloud Project ID with billing enabled is required.
 
 ### 2. Authentication
-Before running Terraform, you must authenticate your CLI with your Google Cloud account. In the terminal run: 
+Before running Terraform, you must authenticate your CLI with your Google Cloud account. In the terminal run:
+
 `gcloud auth application-default login`.
 
 ### 3. Deployment Steps
 Steps to build the infrastructure:
 
 - Clone the repository and change to the lab directory:
+  
 `git clone https://github.com/kruno-kartus/gcp-terraform-network-lab.git
 cd gcp-terraform-network-lab`
 
 - Initialize Terraform:
+  
 `terraform init`
 
 - Plan and verify infrastructure:
+  
 `terraform plan`
 
-- Deploy the infrastructure, this will create resources in GCP:
+- Deploy the infrastructure. This will create resources in GCP:
+  
 `terraform apply`
 
-4. Cleanup
-To avoid unnecessary costs, you can remove the entire infrastructure with the following command:
+4. Cleanup: To avoid unnecessary costs, you can remove the entire infrastructure with the following command:
+
 `terraform destroy`
